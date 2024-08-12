@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
 import { stat } from 'fs';
-import { MonayModel } from 'src/models/monay.model';
+import { MonayModel } from 'src/models/account.model';
 
 @Injectable()
-export class MonayService {
+export class AccountService {
     constructor(
         @InjectModel(MonayModel)
         private readonly monayModel: typeof MonayModel,

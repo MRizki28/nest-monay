@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { AppController } from '../controllers/app.controller';
 import { AppService } from './app.service';
-import { MonayModule } from './monay/monay/monay.module';
+import { MonayModule } from './account/monay/monay.module';
 import { SequelizeModule } from '@nestjs/sequelize';
 
 require('dotenv').config();

@@ -3,14 +3,22 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('tb_monay', {
+    await queryInterface.createTable('tb_users', {
       id: {
         type: Sequelize.UUID,
         defaultValue: Sequelize.UUIDV4,
         allowNull: false,
         primaryKey: true
       },
-      description: {
+      name: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      email: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      password: {
         type: Sequelize.STRING,
         allowNull: false
       },
@@ -26,6 +34,6 @@ module.exports = {
   },
 
   async down(queryInterface, Sequelize) {
-    async: queryInterface.dropTable('tb_monay')
+   await queryInterface.dropTable('tb_users')
   }
 };

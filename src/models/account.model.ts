@@ -1,10 +1,10 @@
 import { Column, CreatedAt, DataType, Model, Table, UpdatedAt } from "sequelize-typescript";
 
 @Table({
-    tableName: 'tb_monay'
+    tableName: 'tb_account'
 })
 
-export class MonayModel extends Model<MonayModel>{
+export class AccountModel extends Model<AccountModel>{
     @Column({
         type: DataType.UUID,
         defaultValue: DataType.UUIDV4,

@@ -1,10 +1,10 @@
 import { Controller, Get } from '@nestjs/common';
-import { MonayService } from 'src/service/monay/monay/monay.service';
+import { AccountService } from 'src/service/account/account.service';
 
 @Controller('monay')
-export class MonayController {
+export class AccountController {
     constructor(
-        private readonly monayService: MonayService
+        private readonly monayService: AccountService
     ) {}
 
     @Get('/')
