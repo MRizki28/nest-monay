@@ -19,7 +19,7 @@ module.exports = {
         },
         onUpdate: 'CASCADE',
         onDelete: 'CASCADE'
-      }
+      },
       account_name: {
         type: Sequelize.STRING,
         allowNull: false
@@ -31,7 +31,7 @@ module.exports = {
       account_type: {
         type: Sequelize.ENUM('tabungan', 'giro'),
         allowNull: false
-      }
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
