@@ -31,6 +31,12 @@ export class UserModel extends Model<UserModel>{
     })
     password: string;
 
+    @Column({
+        type: DataType.STRING,
+        allowNull: true
+    })
+    access_token: string;
+
     @CreatedAt
     created_at: Date;
 
