@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from '../controllers/app.controller';
 import { AppService } from './app.service';
-import { MonayModule } from './account/monay/monay.module';
 import { SequelizeModule } from '@nestjs/sequelize';
+import { UserModule } from './user/user.module';
+import { AccountModule } from './account/account.module';
 
 require('dotenv').config();
 
@@ -14,7 +15,8 @@ require('dotenv').config();
       synchronize: true,
       uri: process.env.DATABASE_URL,
     }),
-    MonayModule],
+    AccountModule,
+    UserModule],
   controllers: [AppController],
   providers: [AppService],
 })
